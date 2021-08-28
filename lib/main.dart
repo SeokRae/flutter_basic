@@ -9,23 +9,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'First MyApp',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyHomePage(), // 유형에 따라 Stateless, Stateful 한 클래스를 작성
+      title: 'Character Card',
+      // theme: ThemeData(primarySwatch: Colors.blue),
+      home: MyCard(), // 유형에 따라 Stateless, Stateful 한 클래스를 작성
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AppBar'),
+        title: Text('Card'),
+        centerTitle: true, // 중간 정렬
+        backgroundColor: Colors.redAccent,
+        elevation: 0.0, // 떠있는 효과를 없애기 위한 옵션
       ),
-      body: Center(
+      body: Center (
         child: Column(
-          children: <Widget>[
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             Text('Hello'),
             Text('Hello'),
             Text('Hello')
@@ -35,3 +39,23 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+// class MyHomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('AppBar'),
+//       ),
+//       body: Center(
+//         child: Column(
+//           children: <Widget>[
+//             Text('Hello'),
+//             Text('Hello'),
+//             Text('Hello')
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
