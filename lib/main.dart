@@ -6,8 +6,6 @@ void main() => runApp(MyApp());
 
 // Stateless Widget 만들기
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,13 +17,20 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First AppBar'),
+        title: Text('AppBar'),
+      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Text('Hello'),
+            Text('Hello'),
+            Text('Hello')
+          ],
+        ),
       ),
     );
   }
