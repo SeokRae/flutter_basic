@@ -21,23 +21,23 @@ class MyPage extends StatelessWidget {
           title: Text('Snack Bar'),
           centerTitle: true,
         ),
-        body: Builder(builder: (BuildContext ctx) {
-          return Center(
-            child: FlatButton(
-              child: Text(
-                'Show me',
-                style: TextStyle(color: Colors.white),
+        body: Builder(
+          builder: (BuildContext ctx) {
+            return Center(
+              child: ElevatedButton(
+                child: Text(
+                  'Show me',
+                  style: TextStyle(color: Colors.white),
+                ),
+                // color: Colors.red,
+                onPressed: () {
+                  ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
+                    content: Text('HelloWorld'),
+                  ));
+                },
               ),
-              color: Colors.red,
-              onPressed: () {
-                ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
-                  content: Text('HelloWorld'),
-                ));
-              },
-            ),
-          );
-        },
-        )
-    );
+            );
+          },
+        ));
   }
 }

@@ -86,3 +86,15 @@ void main() {
 
 - BuildContext는 stateless 위젯이나 state 빌드 메서드에 의해서 리턴 된 위젯의 부모가 된다.
 
+## FlatButton is deprecated
+
+- [Flutter FlatButton is deprecated - alternative solution with width and height](https://stackoverflow.com/questions/66805535/flutter-flatbutton-is-deprecated-alternative-solution-with-width-and-height)
+
+- solution
+  - [FlatButton To TextButton Migration](https://stackoverflow.com/a/66805843)
+  - [ElevatedButton을 사용하는 방법](https://stackoverflow.com/a/68601192)
+  
+## Scaffold.of(context).showSnackBar() is deprecated
+
+- ['showSnackBar' is deprecated and shouldn't be used](https://stackoverflow.com/questions/65906662/showsnackbar-is-deprecated-and-shouldnt-be-used)
+
