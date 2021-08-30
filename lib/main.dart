@@ -24,12 +24,12 @@ class MyPage extends StatelessWidget {
         centerTitle: true,
         elevation: 0.0,
         // leading: 아이콘 버튼이나 간단한 위젯을 왼쪽에 배치
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            print('menu button is clicked');
-          },
-        ),
+        // leading: IconButton(
+        //   icon: Icon(Icons.menu),
+        //   onPressed: () {
+        //     print('menu button is clicked');
+        //   },
+        // ),
         // 복수의 아이콘 버튼 등을 오른쪽에 배치
         actions: [
           IconButton(
@@ -46,6 +46,31 @@ class MyPage extends StatelessWidget {
             },
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage('assets/cat.gif'),
+                backgroundColor: Colors.white,
+              ),
+              accountName: Text('SeokRae'),
+              accountEmail: Text('Seok@gmail.com'),
+              onDetailsPressed: () {
+                print('arrow is clicked');
+              },
+              decoration: BoxDecoration(
+                color: Colors.red[200],
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40.0),
+                  bottomRight: Radius.circular(40.0),
+                )
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
