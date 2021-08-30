@@ -98,3 +98,7 @@ void main() {
 
 - ['showSnackBar' is deprecated and shouldn't be used](https://stackoverflow.com/questions/65906662/showsnackbar-is-deprecated-and-shouldnt-be-used)
 
+## Snack Bar and Toast Message
+
+- 빌더 위젯 없이 Snack Bar 만들기
+- Toast message 구현하기
