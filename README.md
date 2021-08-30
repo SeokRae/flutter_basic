@@ -80,3 +80,9 @@ void main() {
   Person p2 = new Person('Jane', 27, 'female');
 }
 ```
+
+
+## BuildContext 개념
+
+- BuildContext는 stateless 위젯이나 state 빌드 메서드에 의해서 리턴 된 위젯의 부모가 된다.
+
