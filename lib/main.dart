@@ -56,19 +56,57 @@ class MyPage extends StatelessWidget {
                 backgroundImage: AssetImage('assets/cat.gif'),
                 backgroundColor: Colors.white,
               ),
+              otherAccountsPictures: [
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/cat.gif'),
+                  backgroundColor: Colors.white,
+                ),
+              ],
               accountName: Text('SeokRae'),
               accountEmail: Text('Seok@gmail.com'),
               onDetailsPressed: () {
                 print('arrow is clicked');
               },
               decoration: BoxDecoration(
-                color: Colors.red[200],
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40.0),
-                  bottomRight: Radius.circular(40.0),
-                )
+                  color: Colors.red[200],
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40.0),
+                    bottomRight: Radius.circular(40.0),
+                  )),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Colors.grey[750],
               ),
-            )
+              title: Text('Home'),
+              onTap: () {
+                print('Home is clicked');
+              },
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: Colors.grey[750],
+              ),
+              title: Text('Setting'),
+              onTap: () {
+                print('Setting is clicked');
+              },
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.question_answer,
+                color: Colors.grey[750],
+              ),
+              title: Text('Q&A'),
+              onTap: () {
+                print('Question is clicked');
+              },
+              trailing: Icon(Icons.add),
+            ),
           ],
         ),
       ),
