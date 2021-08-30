@@ -6,139 +6,46 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Cat World',
-      home: Grade(),
+      title: 'AppBar',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: MyPage(),
     );
   }
 }
 
-class Grade extends StatelessWidget {
+class MyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[800],
-
       appBar: AppBar(
-        title: Text('Cat Bar'),
-        backgroundColor: Colors.amber[700],
+        title: Text('AppBar icon menu'),
         centerTitle: true,
         elevation: 0.0,
-      ),
-
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0),
-
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-
-          children: [
-
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage('assets/cat.gif'),
-                radius: 60.0,
-              ),
-            ),
-
-            Divider(
-              height: 60.0,
-              color: Colors.grey[850],
-              thickness: 0.5,
-              endIndent: 30.0,
-            ),
-
-            Text('Name',
-              style: TextStyle(
-                color: Colors.white,
-                letterSpacing: 2.0,
-              ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text('Cat',
-              style: TextStyle(
-                color: Colors.white,
-                letterSpacing: 2.0,
-                fontSize: 28.0,
-                fontWeight: FontWeight.bold
-              ),
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            Text('Cat POWER LEVEL',
-              style: TextStyle(
-                color: Colors.white,
-                letterSpacing: 2.0,
-              ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text('14',
-              style: TextStyle(
-                  color: Colors.white,
-                  letterSpacing: 2.0,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-              ),
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            Row(
-              children: [
-                Icon(Icons.check_circle_outline),
-                SizedBox(
-                  width: 10.0
-                ),
-                Text('using cat punch',
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    letterSpacing: 1.0
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Icon(Icons.check_circle_outline),
-                SizedBox(
-                    width: 10.0
-                ),
-                Text('face hero tatto',
-                  style: TextStyle(
-                      fontSize: 16.0,
-                      letterSpacing: 1.0
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Icon(Icons.check_circle_outline),
-                SizedBox(
-                    width: 10.0
-                ),
-                Text('fire flames',
-                  style: TextStyle(
-                      fontSize: 16.0,
-                      letterSpacing: 1.0
-                  ),
-                ),
-              ],
-            ),
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage('assets/cat.png'),
-                radius: 40.0,
-                backgroundColor: Colors.amber[800],
-              ),
-            ),
-          ],
+        // leading: 아이콘 버튼이나 간단한 위젯을 왼쪽에 배치
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            print('menu button is clicked');
+          },
         ),
+        // 복수의 아이콘 버튼 등을 오른쪽에 배치
+        actions: [
+          IconButton(
+            icon: Icon(Icons.shopping_cart),
+            // onPressed: 함수의 형태로 일반 버튼이나 아이콘 버튼을 터치했을 때 일어나는 이벤트를 정의
+            onPressed: () {
+              print('Shopping Cart Button is Clicked');
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              print('Search Button is Clicked');
+            },
+          ),
+        ],
       ),
     );
   }
